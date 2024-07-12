@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Keshav Anand Verma's personal website">
+    <meta name="keywords" content="Resume, Html Tut">
+    <meta name="author" content="Keshav Anand Verma">
+    <title> Keshav Anand Verma </title>
+    <link rel="stylesheet" href="css/style1.css">
+    <link rel="icon" href="img/_1. keshav-logo-edited-modified.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="top-container">
+        <div class="rain"></div>
+        
+        <img src="img/—Pngtree—dynamic cartoon explosion cloud dialog_7231040.png" alt="cloud img" class="top-cloud">
+    
+        <h1>I'm Keshav</h1><br>
+        <p>a programmer</p>
+    
+        <img src="img/—Pngtree—dynamic cartoon explosion cloud dialog_7231040.png" alt="cloud img" class="bottom-cloud">
+        <div class="programmer-img-container">
+            <img src="img/pngwing.com (3).png" alt="programmer img" class="programmer-img">
+        </div>
+    </div>
+
+    <div class="middle-container">
+        <div class="profile">
+            <img src="img/_1. keshav-logo-edited-modified.png" alt="keshav logo" class="keshav-logo">
+            <h2>Hello.</h2>
+            <p class="intro">I am a programmer and a web developer. I am a student of NSUT college, Delhi. I am learning
+                programming languages like Python, C++, Java, etc. I am also learning web development languages like
+                HTML, CSS, JavaScript, etc. I am also learning web development frameworks like Bootstrap, React, etc.
+            </p>
+        </div>
+        <hr>
+        <div class="skills">
+            <h2>My Skills.</h2>
+            <div class="skill-row">
+                <img src="img/develop.png" alt="C++ img" class="skill-icon">
+                <h3>Programming</h3>
+                <p>I am learning programming languages like Python, C++, Java, etc. I am also learning web development
+                    languages like HTML, CSS, JavaScript, etc.</p>
+            </div>
+            <div class="skill-row">
+                <img src="img/world-wide-web.png" alt="www icon" class="skill-icon">
+                <h3>Web Development</h3>
+                <p>I am learning web development languages like HTML, CSS, JavaScript, etc. I am also learning web
+                    development frameworks like Bootstrap, React, etc.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="contact-me">
+            <h2>Get In Touch</h2>
+            <h3>If you love programming and web development, then you can contact me. Maybe we can build something amazing together</h3>
+            <p class="contact-message">I am always ready to collab with innovative ideas. You can contact me on my email or on my social
+                media accounts.</p>
+            <a class="btn" href="mailto:keshavanandverma03@gmail.com">CONTACT ME</a>
+        </div>
+    </div>
+
+    <div class="bottom-container">
+        <a class="footer-link" href="https://www.linkedin.com/in/keshav-verma-0987b5276/"><img src="img/linkedin.png"
+                alt="linkedin icon" class="social-media-icon"></a>
+        <a class="footer-link" href="https://www.instagram.com/keshav_av/"><img src="img/instagram.png"
+                alt="instagram icon" class="social-media-icon"></a>
+        <p>&copy; 2024 Keshav Anand Verma.</p>
+
+    </div>
+
+    <script>
+        const rainContainer = document.querySelector('.rain');
+        const topContainer = document.querySelector('.top-container');
+    
+        function createRaindrop() {
+            const raindrop = document.createElement('div');
+            raindrop.classList.add('raindrop');
+            raindrop.style.left = Math.random() * 100 + '%';
+            raindrop.style.animationDuration = Math.random() * 2 + 2 + 's';
+            raindrop.style.opacity = Math.random() * 0.3 + 0.2;
+            
+            // Randomize the diagonal angle slightly
+            const angle = Math.random() * 10 + 15; // 15 to 25 degrees
+            raindrop.style.transform = `rotate(${angle}deg)`;
+    
+            rainContainer.appendChild(raindrop);
+    
+            setTimeout(() => {
+                raindrop.remove();
+            }, 4000);
+        }
+    
+        function startRain() {
+            setInterval(createRaindrop, 50);
+        }
+    
+        startRain();
+    </script>
+    
+
+    
+
+</body>
+
+</html>

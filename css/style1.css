@@ -1,0 +1,280 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Exo 2", sans-serif;
+    text-align: center;
+}
+
+.top-container {
+    background-color: rgb(238, 238, 238);
+    margin: 0;
+    height: auto;
+    width: 100%;
+    position: relative;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+.rain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.raindrop {
+    position: absolute;
+    width: 3px;
+    height: 25px;
+    background: rgba(0, 173, 181, 0.4);
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-25px) translateX(15px) rotate(20deg);
+    }
+    100% {
+        transform: translateY(1300px) translateX(-15px) rotate(20deg);
+    }
+}
+
+.top-cloud, .bottom-cloud {
+    width: 350px;
+    height: auto;
+    animation: wave 2s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+}
+
+.top-cloud {
+    position: absolute;
+    top: 10px;
+    right: 10%;
+}
+
+.bottom-cloud {
+    position: absolute;
+    bottom: 300px;
+    left: 10%;
+}
+
+@keyframes wave {
+    0% { transform: translateY(0) translateX(0); }
+    25% { transform: translateY(-10px) translateX(10px); }
+    50% { transform: translateY(0) translateX(10px); }
+    75% { transform: translateY(10px) translateX(-10px); }
+    100% { transform: translateY(0) translateX(0); }
+}
+
+.top-container h1 {
+    margin-top: 100px;
+    margin-bottom: 16px;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 5rem;
+    color: rgb(0, 173, 181);
+}
+
+.top-container p {
+    font-size: 1.5rem;
+    color: rgb(0, 173, 181);
+}
+
+.programmer-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.programmer-img {
+    width: 650px;
+    height: auto;
+}
+
+.middle-container {
+    padding: 20px;
+}
+
+h2 {
+    color: rgb(0, 173, 181);
+}
+
+.intro {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+hr {
+    border: none;
+    width: 5%;
+    border-top: 10px dotted rgb(196, 196, 196);
+    margin: 20px auto;
+}
+
+.keshav-logo {
+    margin-top: 30px;
+    height: 200px;
+    width: 200px;
+}
+
+.skill-row {
+    width: 80%;
+    max-width: 600px;
+    margin: 30px auto;
+    text-align: left;
+}
+
+.skill-icon {
+    width: 100px;
+    height: auto;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.skill-row h3 {
+    text-align: left;
+    color: rgb(0, 173, 181);
+}
+
+.skill-row p {
+    text-align: left;
+    line-height: 2;
+}
+
+.contact-me {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-me h2 {
+    font-size: 2rem;
+}
+
+.contact-me h3 {
+    color: rgb(57, 62, 70);
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: rgb(34, 40, 49);
+    background-color: rgb(0, 173, 181);
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background: linear-gradient(125deg, rgba(255, 255, 255, 0.3) 0%, rgba(255, 255, 255, 0) 40%);
+    transform: translateX(-100%) translateY(-50%) rotate(25deg);
+    transition: transform 0.5s ease;
+}
+
+.btn:hover {
+    background-color: rgb(57, 62, 70);
+    color: white;
+}
+
+.btn:hover::before {
+    transform: translateX(100%) translateY(-50%) rotate(25deg);
+}
+
+.bottom-container {
+    background-color: rgb(0, 173, 181);
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.bottom-container p {
+    margin-bottom: 0;
+    color: rgb(34, 40, 49);
+}
+
+.social-media-icon {
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .programmer-img {
+        width: 400px; /* Reduce size for tablets */
+    }
+    .top-container h1 {
+        font-size: 3rem;
+    }
+
+    .top-container p {
+        font-size: 1.2rem;
+    }
+
+    .top-cloud, .bottom-cloud {
+        width: 150px;
+    }
+
+    .bottom-cloud {
+        bottom: 200px;
+    }
+
+    .skill-icon {
+        float: none;
+        margin: 0 auto 20px;
+        display: block;
+    }
+
+    .skill-row {
+        text-align: center;
+    }
+
+    .skill-row h3, .skill-row p {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .top-container h1 {
+        font-size: 2.5rem;
+    }
+
+    .top-container p {
+        font-size: 1rem;
+    }
+    .programmer-img {
+        width: 200px; /* Reduce size for tablets */
+    }
+
+    .top-cloud, .bottom-cloud {
+        width: 100px;
+    }
+
+    .bottom-cloud {
+        bottom: 150px;
+    }
+
+    .keshav-logo {
+        height: 150px;
+        width: 150px;
+    }
+
+    .contact-me h2 {
+        font-size: 1.5rem;
+    }
+}
